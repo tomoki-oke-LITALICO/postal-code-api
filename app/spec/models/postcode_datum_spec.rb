@@ -26,6 +26,13 @@ describe PostcodeDatum, type: :model do
                 expect(postcode_datum.valid?).to be_falsey
             end
         end
+
+        context 'city_name' do
+            it 'nilの場合invalid' do
+                postcode_datum.city_name = nil
+                expect(postcode_datum.valid?).to be_falsey
+            end
+        end
     end
 
 
