@@ -1,0 +1,2 @@
+class PostcodeDatum < ApplicationRecord
+end
