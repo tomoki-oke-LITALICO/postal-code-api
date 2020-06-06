@@ -1,6 +1,17 @@
 require "csv"
 
 describe PostcodeDatum, type: :model do
+    describe 'バリデーション' do
+        let(:postcode_datum) { create(:postcode_datum) }
+        context 'postcode' do
+            it 'nilの場合invalid' do
+                postcode_datum.postcode = nil
+                expect(postcode_datum.valid?).to be_falsey
+            end
+        end
+    end
+
+
     describe '.find_or_initialize_by_csv' do
         it "CSVをパースしてassign出来る" do
             CSV.foreach("spec/fixtures/csvs/sample.csv", encoding: "Shift_JIS:UTF-8") do |row|
