@@ -8,6 +8,16 @@ describe PostcodeDatum, type: :model do
                 postcode_datum.postcode = nil
                 expect(postcode_datum.valid?).to be_falsey
             end
+
+            it '数字ではない場合invalid' do
+                postcode_datum.postcode = 'aaaaaaa'
+                expect(postcode_datum.valid?).to be_falsey
+            end
+
+            it '7桁ではない場合invalid' do
+                postcode_datum.postcode = '001001'
+                expect(postcode_datum.valid?).to be_falsey
+            end
         end
     end
 
