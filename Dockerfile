@@ -1,7 +1,7 @@
 FROM ruby:2.7.1
 
 RUN apt-get update -qq && \
-    apt-get install -y build-essential nodejs rsync zip
+    apt-get install -y build-essential nodejs rsync zip git
 
 RUN mkdir /app
 ENV APP_ROOT /app
