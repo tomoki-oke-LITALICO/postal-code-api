@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/fast-jsonapi/fast_jsonapi
+  revision: 18196294081e34cc065b67013a64dd524ff2c310
+  specs:
+    fast_jsonapi (1.7.2)
+      activesupport (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -233,6 +240,7 @@ DEPENDENCIES
   capybara
   dynomite
   factory_bot
+  fast_jsonapi (~> 1.7.2)!
   jets
   launchy
   mysql2 (~> 0.5.2)
