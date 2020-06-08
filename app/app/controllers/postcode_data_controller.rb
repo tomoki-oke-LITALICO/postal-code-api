@@ -1,4 +1,4 @@
-class PostcodesController < ApplicationController
+class PostcodeDataController < ApplicationController
   def search
     postcode_data = PostcodeDatum.where(postcode: postcode_params[:postcode])
 

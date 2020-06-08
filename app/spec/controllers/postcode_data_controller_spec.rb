@@ -1,7 +1,7 @@
 require "csv"
 require 'json'
 
-describe PostcodesController, type: :controller do
+describe PostcodeDataController, type: :controller do
     before do
         CSV.foreach("spec/fixtures/csvs/sample.csv", encoding: "Shift_JIS:UTF-8") do |row|
             PostcodeDatum.find_or_initialize_by_csv(row).save
