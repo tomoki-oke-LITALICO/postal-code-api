@@ -11,6 +11,9 @@ gem "dynomite"
 
 gem 'fast_jsonapi', '~> 1.7.2', git: 'https://github.com/fast-jsonapi/fast_jsonapi'
 
+gem 'faraday'
+gem 'rubyzip'
+
 # development and test groups are not bundled as part of the deployment
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

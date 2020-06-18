@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_155558) do
+ActiveRecord::Schema.define(version: 2020_06_18_084108) do
 
   create_table "postcode_data", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "postcode"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_06_06_155558) do
     t.boolean "is_disabled", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "city_code"
     t.index ["postcode"], name: "index_postcode_data_on_postcode"
   end
 

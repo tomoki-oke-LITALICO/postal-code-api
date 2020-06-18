@@ -62,4 +62,6 @@ Jets.application.configure do
   # config.logger = Jets::Logger.new($strerr)
 
   config.controllers.default_protect_from_forgery = false
+
+  config.autoload_paths += %W(#{config.root}/data/**/*.rb)
 end
