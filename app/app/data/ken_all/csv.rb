@@ -5,16 +5,14 @@ class KenAll::Csv
   KEN_ALL_CSV_URL = 'https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip'.freeze
   KEN_ALL_CSV_NAME = 'KEN_ALL.CSV'
   TMP_ZIP_PATH = '/tmp/ken_all.zip'
-  TMP_CSV_PATH = './ken_all.csv'
+  TMP_CSV_PATH = '/tmp/ken_all.csv'
 
   def initialize(csv_path = TMP_CSV_PATH)
     @csv_path = csv_path
   end
 
   def foreach
-    CSV.foreach(@csv_path) do |row|
-      yield KenAll::Row.new(row)
-    end
+    CSV.foreach(@csv_path)
   end
   
   class << self

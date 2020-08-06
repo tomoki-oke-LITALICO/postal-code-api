@@ -14,7 +14,9 @@ class KenAll::Row
       prefecture_name: prefecture_name,
       city_name: city_name,
       street_name: street_name,
-      city_code: city_code
+      city_code: city_code,
+      created_at: Time.current,
+      updated_at: Time.current
     }
   end
 end
